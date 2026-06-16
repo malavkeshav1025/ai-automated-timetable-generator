@@ -1,0 +1,149 @@
+body {
+
+    background: #050505;
+
+    background-image:
+        radial-gradient(circle at top left, #1a1a1a 0%, transparent 25%),
+        radial-gradient(circle at bottom right, #111 0%, transparent 25%);
+
+    min-height: 100vh;
+
+    font-family: 'Poppins', sans-serif;
+
+    color: white;
+
+    overflow-x: hidden;
+}
+
+
+@keyframes gradientBG {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+
+.card {
+
+    background: rgba(20, 20, 20, 0.9);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 20px;
+
+    color: white;
+
+    box-shadow: 0 0 25px rgba(0,255,255,0.08);
+
+    backdrop-filter: blur(10px);
+}
+
+
+.main-title {
+
+    font-size: 3rem;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+    color: white;
+
+    text-shadow:
+        0 0 10px cyan,
+        0 0 20px cyan,
+        0 0 40px cyan;
+}
+
+
+.btn {
+
+    border-radius: 14px;
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+
+    border: none;
+}
+
+.btn:hover {
+
+    transform: scale(1.05);
+
+    box-shadow: 0 0 20px cyan;
+}
+
+
+
+table {
+
+    background: rgba(20,20,20,0.95);
+
+    color: white;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+th {
+
+    background: #111;
+
+    color: cyan;
+}
+
+td {
+
+    background: rgba(255,255,255,0.03);
+}
+
+
+
+
+
+.generate-btn {
+
+    animation: pulse 2s infinite;
+
+}
+
+
+@keyframes pulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+.subject-box {
+
+    background: rgba(255,255,255,0.2);
+
+    border-radius: 10px;
+
+    padding: 10px;
+
+}

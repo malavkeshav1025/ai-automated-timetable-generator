@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+
+        Generated Timetable
+
+    </title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container mt-5">
+
+    <h1 class="main-title text-center mb-5">
+
+        📚 Generated Timetable
+
+    </h1>
+
+    {% for day in timetable.keys() %}
+
+    <div class="card p-4 mb-5 shadow">
+
+        <h2 class="text-center mb-4">
+
+            {{ day }}
+
+        </h2>
+
+        <table class="table table-bordered table-dark table-hover text-center">
+
+            <thead>
+
+                <tr>
+
+                    <th>Time Slot</th>
+
+                    <th>Subject</th>
+
+                    <th>Faculty</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                {% for data in timetable[day] %}
+
+                <tr>
+
+                    <td>
+
+                        {{ slots[loop.index0] }}
+
+                    </td>
+
+                    <td>
+
+                        {{ data.subject }}
+
+                    </td>
+
+                    <td>
+
+                        {{ data.faculty }}
+
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    {% endfor %}
+
+    <div class="text-center">
+
+        <a href="/"
+           class="btn btn-primary">
+
+            ⬅ Back Home
+
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
